@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title> <!--nazwa/tytuł strony-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png"> <!--favicon - ikona strony internetowej, widoczna na pasku adresu przeglądarki i na kracie otwartej strony www.-->
+    <!--unikalny kod osadzania zestawu--> <script src="http://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script> <!--link do fontawesome: https://fontawesome.com/ -->
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/" class="logo"><!--miejsce na autorskie logo-->
+            <ul id="sidemenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Profolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i> <!--ikonę pobrać z https://fontawesome.com/icons/categories (ten obszar dotyczy urządzeń mobilnych)-->
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i><!--ikonę pobrać z https://fontawesome.com/icons/categories (ten obszar dotyczy urządzeń mobilnych)-->
+            <div class="toggle-btn" id="btn">
+                <span id="btnText">Light</span>
+                <img src="images/sun.png" id="btnIcon">
+            </div>
+        </nav>
+        <div class="header-text">
+            <h1 class="slide-left">Witam <span>Imię</span> Nazwisko.</h1> <!--miejsce na przedstawienie swojej osoby-->
+            <p class="slide-left">np. Chciałbym zaprezentować moje portfolio.</p> <!--krótki opis czego dotyczy strona-->
+        </div>
+    </div>
+</div>
+<!--ABOUT-->
+<div id="about">
+    <div class="container">
+        <div class="row">   
+            <div class="about-col-1">
+                <img src="images/"><!--miejsce na zdjęcie biznesowe-->
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><!--klika słów o sobie-->
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>np. Analiza biznesowa</span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<!--opis umiejętności-->
+                            </li>
+                            <li><span>np. Rachunkowość</span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li><!--opis umiejętności-->
+                            <li><span>np. Programowanie</span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li><!--opis umiejętności-->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2017 - Current</span><br>zawód</li><!--doświadczenie zawodowe-->
+                            <li><span>2011 - 2017</span><br>zawód</li><!--doświadczenie zawodowe-->
+                            <li><span>2011 - 2011</span><br>zawód</li><!--doświadczenie zawodowe-->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2027</span><br>Uniwersytet Ekonomiczny we Wrocławiu</li><!--edukacja i ukończone kursy-->
+                            <li><span>2025</span><br>Uniwersytet Ekonomiczny we Wrocławiu</li><!--edukacja i ukończone kursy-->
+                            <li><span>2011</span><br>Liceum/Technikum</li><!--edukacja i ukończone kursy-->
+                        </ul>
+                    </div>
+            </div> 
+        </div>
+    </div>
+</div>
+<!--services-->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-sharp fa-solid fa-gears"></i><!--ikonę pobrać z https://fontawesome.com/icons/categories-->
+                <h2>np. Analityk biznesowy</h2><!--stanowisko-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><!--opis posiadanych umiejętności-->
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i><!--ikonę pobrać z https://fontawesome.com/icons/categories-->
+                <h2>np. Księgowy</h2><!--stanowisko-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><!--opis posiadanych umiejętności-->
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i><!--ikonę pobrać z https://fontawesome.com/icons/categories-->
+                <h2>np. Informatyk</h2><!--stanowisko-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><!--opis posiadanych umiejętności-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--portfolio-->
+<div id="portfolio">
+    <div class ="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/ring-binder-used-stored-documents.jpg"><!--zdjęcie związane z zainteresowaniami-->
+                <div class="layer">
+                    <h3>np. Power BI</h3> <!--wykonane projekty, które można połączyć z dyskiem Google lub odwołanie do strony, na której realizowano jakiś kurs-->
+                    <a href="https://drive.google...." target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/"><!--zdjęcie związane z zainteresowaniami-->
+                <div class="layer">
+                    <h3>kurs EXCEL</h3><!--wykonane projekty, które można połączyć z dyskiem Google lub odwołanie do strony, na której realizowano jakiś kurs-->
+                    <a href="https://drive.google..." target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/"><!--zdjęcie związane z zainteresowaniami-->
+                <div class="layer">
+                    <h3>np. Python/C++/C#</h3><!--wykonane projekty, które można połączyć z dyskiem Google lub odwołanie do strony, na której realizowano jakiś kurs-->
+                    <a href="https:..." target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+       <!--<a href="#" class="btn">BACK</a>-->
+    </div>
+</div>
+<!--contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"><!--ikonę pobrać z https://fontawesome.com/icons/categories--></i><a href="mailto:jan.kowalski.ue.wroc.pl" target="_blank">jan.kowalski.ue.wroc.pl</a></p><!--adres e-mail-->
+                <p><i class="fa-sharp fa-solid fa-square-phone"><!--ikonę pobrać z https://fontawesome.com/icons/categories--></i>+48 000 000 000</p><!--numer telefonu-->
+                <p><i class="fa-brands fa-linkedin"></i><!--ikonę pobrać z https://fontawesome.com/icons/categories--><a href="https://www.linkedin.com" target="_blank">linkedin.com</a></p><!--link do linkedin-->
+                <a href="images/CV" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span> 
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright by...</p>
+    </div>
+</div>
+<!--skrypt dotyczący ABOUT-->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<!--skrypt dla urządzeń mobilnych-->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+<!--link do Google Add Script: https://www.google.com/script/start/-->
+<script>
+    const scriptURL = 'https:...'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+<!--skrypt do zmany koloru strony-->
+<script> 
+
+    let btn = document.getElementById("btn");
+    let btnText = document.getElementById("btnText");
+    let btnIcon = document.getElementById("btnIcon");
+    
+    
+    btn.onclick = function(){
+        document.body.classList.toggle("light-theme");
+    
+        if(document.body.classList.contains("light-theme")){
+            btnIcon.src = "images/moon.png";
+            btnText.innerHTML = "Dark";
+        }else{
+            btnIcon.src = "images/sun.png";
+            btnText.innerHTML = "Light";
+        }
+    }
+    
+    </script>
+
+</body>
+</html>
